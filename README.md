@@ -19,7 +19,7 @@ The complete code is divided into three files:
 
 1. interview-task.py
 2. helper_functions.py (it contains helper functions)
-3. constant.py (it containts file paths)
+3. constant.py (it contains file paths)
 
 
 The program uses three files and those are located in the "files" folder in root directory.:
