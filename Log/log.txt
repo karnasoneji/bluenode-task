@@ -1,0 +1,3 @@
+
+### The script has started the execution. ###
+### The script has completed the execution. ###

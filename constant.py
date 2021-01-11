@@ -1,0 +1,6 @@
+LOG_FILE_PATH = ".//Log//log.txt" 
+INPUT_FILE_PATH = ".//files//input_file.txt"
+STANDARD_DEFINITION_JSON_FILE_PATH = ".//files//standard_definition.json"
+ERROR_CODE_JSON_FILE_PATH = ".//files//error_codes.json"
+SUMMARY_FILE_PATH = ".//Report and Summary//summary.txt"
+REPORT_FILE_PATH = ".//Report and Summary//report.csv"
