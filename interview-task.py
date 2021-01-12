@@ -103,16 +103,13 @@ for single_input_line in input_lines_list:
 			write_report([standard_definition_sub_section_section,standard_definition_sub_section_key,'',standard_definition_sub_section_data_type,'',standard_definition_sub_section_max_length,'E05'])
 			continue
 		
-		#If the sub-section of input is empty, we'll set length and data-type validation to false. It fails all criteria(both data-type and length).
-		if not single_input_line[standard_rule_list_index+1]:
-				flag_data_type_validation = False				#setting validation to False, this means data-type validation for that input sub-section has failed
-				flag_field_length_validation = False			#setting validation to False, this means length validation for that input sub-section has failed
-		else:
-				#length validation : matching the length of each sub-section of input with the length of respective sub-section of standard definition
-				flag_field_length_validation = validate_length(int(standard_definition_sub_section_max_length),len(single_input_line[standard_rule_list_index+1]))	
+
+		
+		#length validation : matching the length of each sub-section of input with the length of respective sub-section of standard definition
+		flag_field_length_validation = validate_length(int(standard_definition_sub_section_max_length),len(single_input_line[standard_rule_list_index+1]))	
 				
-				#data-type validation : matching the data-type of each sub-section of input with the data-type of respective sub-section of standard definition
-				flag_data_type_validation = validate_data_type(standard_definition_sub_section_data_type,get_data_type(single_input_line[standard_rule_list_index+1]))	
+		#data-type validation : matching the data-type of each sub-section of input with the data-type of respective sub-section of standard definition
+		flag_data_type_validation = validate_data_type(standard_definition_sub_section_data_type,get_data_type(single_input_line[standard_rule_list_index+1]))	
 		
 		
 		#given data-type of the input sub-section

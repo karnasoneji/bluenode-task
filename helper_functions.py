@@ -9,7 +9,7 @@ import csv
 def get_data_type(input):
 	if (re.match(r"^[0-9]+$",input)):
 		return "digits";
-	elif (re.match(r"^[0-9a-zA-Z ]+$",input)):
+	elif (re.match(r"^[0-9a-zA-Z]+$",input)):
 		return "word_characters"
 	else:
 		return "others"
@@ -69,10 +69,7 @@ def write_report(data):
 			csv_report_writer = csv.writer(file_handle, delimiter=',')
 			if(flag_header):
 				csv_report_writer.writerow(['Section','Sub-Section','Given DataType','Expected DataType','Given Length','Expected MaxLength','Error Code'])
-			
-			#if the given length is zero, we are setting given length and given data-type column as empty
-			if(data[4] == '0'):
-				data[2] = data[4] = ''
+
 			csv_report_writer.writerow(data)
 	except Exception as error:
 		print(error)
